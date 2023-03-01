@@ -1,0 +1,388 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  .simulation {
+    width: 800px;
+    height: 600px;
+    border: 1px solid black;
+  }
+  
+  .simulation .topic {
+    background-color: #000;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 50px;
+  }
+  
+  .subtopics {
+    width: 100%-20px;
+    margin-left: 20px;
+    line-height: 35px;
+  }
+  
+  .subtopics ol li {
+    margin-left: 40px;
+  }
+  
+  .subtopics p {
+    margin-left: 20px;
+  }
+  
+  .grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    padding: 20px;
+  }
+  
+  .grid-item {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    place-items: center;
+  }
+  
+  .img1 {
+    height: 85px;
+    width: 100px;
+    margin: 20px auto;
+  }
+  
+  .img2 {
+    height: 85px;
+    width: 110px;
+    margin: 20px auto;
+  }
+  
+  .img3 {
+    height: 80px;
+    width: 110px;
+    margin: 20px auto;
+  }
+  
+  .img4 {
+    height: 50px;
+    width: 90px;
+    margin: 20px auto;
+  
+  }
+  
+  .img5 {
+    height: 100px;
+    width: 160px;
+    margin: 20px auto;
+  
+  }
+  
+  .img6 {
+    height: 85px;
+    width: 90px;
+    margin: 20px auto;
+  }
+  
+  /* next button */
+  
+  #buttonup {
+    border: 0;
+    cursor: pointer;
+    float: right;
+    margin-right: 20px;
+    background-color: white;
+  }
+  
+  .values button{
+    width: 30px;
+    height: 20px;
+    border-radius: 10%;
+    border: 1px solid black;
+  }
+  
+  #buttondown {
+    border: 0;
+    cursor: pointer;
+    float: left;
+    margin-left: 20px;
+    background-color: white;
+    transform: scaleX(-1);
+    display: none;
+  }
+  
+  #IBgraphbutton {
+    display: none;
+    border: 0;
+    cursor: pointer;
+    float: right;
+    margin-right: 20px;
+    width: 90px;
+    height: 30px;
+    border-radius: 20px;
+    border: 2px solid black;
+  }
+  
+  #IBgraph {
+    display: none;
+    height: 400px;
+    width: 700px;
+    position: absolute;
+    background-color: white;
+    top: 110px;
+    left: 45px;
+    border: black solid;
+    border-width: 3px;
+    z-index: 7;
+  }
+  
+  #IBgraph button {
+    width: 60px;
+    height: 31px;
+    border-radius: 20px;
+    cursor: pointer;
+    float: right;
+    margin-right: 8px;
+    position: relative;
+    margin-top: -38px;
+  }
+  
+  .nextimg {
+    width: 45px;
+    height: 45px;
+  }
+  
+  #content {
+    width: 800px;
+    height: 500px;
+  }
+  
+  #content2 {
+    width: 800px;
+    height: 500px;
+  }
+  
+  /* options */
+  
+  .simoptions {
+    background-color: rgba(135, 207, 235, 0.621);
+    width: 25%;
+    height: 550px;
+    float: left;
+    filter: blur(0px);
+  }
+  #Rfvalue {
+    width: 64px;
+    height: 25px;
+    position: absolute;
+    margin-top: 90px;
+    margin-left: 210px;
+    border: none;
+    font-size: 17px;
+    text-align: center;
+    background: #ffffff;
+  }
+  
+  .procedure {
+    margin: 10px;
+  }
+
+  .values{
+    margin: 10px;
+  }
+  
+  #exp {
+    height: 35px;
+    width: 180px;
+    box-shadow: 0px 8px 16px 0px rgba(65, 62, 62, 0.219);
+    cursor: pointer;
+  }
+
+  input[type="number"] {
+    height: 17px;
+    width: 100px;
+  }
+
+  .insert-reset-observation {
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+  }
+  
+
+  .insert-reset-observation button {
+    width: 120px;
+    height: 30px;
+    border-radius: 20px;
+    cursor: pointer;
+  }
+  
+
+  .thickness {
+    margin: 10px;
+  }
+  
+  .hallcurrent {
+    margin: 10px;
+  }
+  
+  .result {
+    margin: 10px;
+    text-align: left;
+  }
+  
+  /* Simulation Box */
+  
+  .mainsimulation {
+    width: 75%;
+    height: 500px;
+    float: right;
+    text-align: center;
+  }
+  .oscilloscope {
+    width: 200px;
+    height:150px;
+    margin-left: 330px;
+  }
+  .circuit {
+    margin-top: 30px;
+    width: 600px;
+    height: 500px;
+  }
+
+  .circuitb {
+    width: 550px;
+    height: 400px;
+    margin-top: 30px;
+    margin-left: 30px;
+  }
+
+
+  #add {
+    display: none;
+    float: right;
+    margin-top: 5px;
+    margin-right: 5px;
+  }
+  .observation {
+    display: none;
+    height: 400px;
+    width: 700px;
+    position: absolute;
+    background-color: rgb(174, 215, 232);
+    top: 110px;
+    left: 45px;
+    border: black solid;
+    border-width: 3px;
+    z-index: 7;
+  }
+  
+  .tablediv {
+    height: 360px;
+    justify-content: center;
+    display: flex;
+    overflow-y: hidden;
+  }
+  
+  .observationTable {
+    border-collapse: collapse;
+    width: 95%;
+    margin-top: 20px;
+    margin-bottom: 5px;
+    height: min-content;
+    background-color: white;
+  }
+  
+  .observation td,
+  th {
+    border: 2px solid #000000;
+    text-align: center;
+    padding: 8px;
+  }
+  
+  .tableObservation {
+    display: flex;
+    height: 40px;
+    width: 100%-10px;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 5px;
+    padding-left: 5px;
+  }
+  
+  .tableObservation button {
+    width: 60px;
+    height: 31px;
+    border-radius: 20px;
+    cursor: pointer;
+  }
+  
+  #content3 {
+    width: 800px;
+    height: 500px;
+  }
+  
+  #graph {
+    width: 800px;
+    height: 500px;
+  }
+  
+  .blocker {
+    display: none;
+    position: absolute;
+    height: 550px;
+    width: 800px;
+    z-index: 6;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  
+  .help {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    margin-left: 5px;
+  }
+  
+  .help button {
+    background-color: rgb(189, 231, 249);
+    border: 0;
+    cursor: pointer;
+    border-radius: 50%;
+  }
+  
+  .help img {
+    width: 25px;
+    height: 25px;
+  }
+  
+  #instructions {
+    display: none;
+    height: 400px;
+    width: 700px;
+    position: absolute;
+    background-color: white;
+    top: 110px;
+    left: 45px;
+    border: black solid;
+    border-width: 3px;
+    z-index: 7;
+  }
+  
+  .icontent {
+    margin-left: 35px;
+    line-height: 1.63rem;
+  }
+  
+  #instructions button {
+    width: 60px;
+    height: 31px;
+    border-radius: 20px;
+    cursor: pointer;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin-right: 5px;
+    margin-bottom: 5px;
+  }
+

@@ -1,13 +1,177 @@
+<!-- Home page of simulator -->
 <!DOCTYPE html>
-<html>
-<head>
-	<!-- Add CSS at the head of HTML file -->
-    <link rel="stylesheet" href="./css/main.css">
-</head>
-<body>
-		<!-- Your code goes here-->
+<html lang="en">
 
-	<!-- Add JS at the bottom of HTML file --> 
-        <script src="./js/main.js"></script>
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src='https://cdn.plot.ly/plotly-2.12.1.min.js'></script>
+    <title>Virtual Lab</title>
+</head>
+
+<body>
+    <!-- simulation -->
+    <div class="simulation" id="simulation">
+        <div class="topic">
+            <h2>Phase Shift Oscillator</h2>
+        </div>
+        <div id="content">
+            <div class="subtopics">
+                <h4>Objective:</h4>
+                <ol>
+                    <li>&ensp;To design a phase shift oscillator and find Frequency.</li>
+                </ol>
+                <h4>Apparatus Used:</h4>
+                <p>Transistor, oscilloscope, breadboard, resistors, capacitors, wires, voltmeter.</p>
+            </div>
+            <div class="grid-container">
+                <div class="grid-item">
+                    <p>Transistor</p><img class='img1' src="images/transistor.png" alt="transistor">
+                </div>
+                <div class="grid-item">
+                    <p>Capacitor</p><img class='img2' src="images/capacitor.png" alt="capacitor">
+                </div>
+                <div class="grid-item">
+                    <p>Resistors</p><img class='img3' src="images/resistor.png" alt="resistor">
+                </div>
+                <div class="grid-item">
+                    <p>Op Amp</p><img class='img4' src="images/opamp.png" alt="opamp">
+                </div>
+                <div class="grid-item">
+                    <p>Oscilloscope</p><img class='img5' src="images/oscilloscope.png" alt="oscilloscope">
+                </div>
+                <div class="grid-item">
+                    <p>Breadboard</p><img class='img6' src="images/breadboard.png" alt="breadboard">
+                </div>
+            </div>
+        </div>
+
+        <!-- content2 -->
+        <div style="display: none;" id="content2">
+            <div class="blocker" onclick="closeobservation()" id="blocker"></div>
+
+            <div class="simoptions" id="simoptions">
+                <div class="procedure">
+                    <label style="text-align:left;">Choose the circuit :</label><br>
+                    <select name="exp" id="exp" onChange="update()">
+                        <option value="Empty" hidden>Select the circuit</option>
+                        <option value="bjt">BJT</option>
+                        <option value="opamp">OP AMP</option>
+                    </select>
+                </div>
+                <div class="values">
+                    <label for="resvalue" style="text-align: left;">Resistance(kΩ)</label>
+                    <input type="number" id="resvalue" name="resvalue" disabled > 
+                    <button onclick="storeNumber()">OK</button><br><br>
+                    <label  for="capvalue">Capacitance(μC)</label>
+                    <input type="number" id="capvalue" name="capvalue" disabled >
+                    <button onclick="storeNumber()">OK</button>
+
+                </div>
+
+                <div class="insert-reset-observation">
+                    <button id="insert" type="button" onclick="insert()" disabled>Turn on</button>
+                    <button id="remove" type="button" onclick="remove()" style="display:none;font-size: 12px;">Turn off</button>
+                </div>
+
+                <div class="insert-reset-observation">
+                    <button id="addbutton" type="button" onclick="AddingToArray()" disabled>Add to Table</button>
+
+                </div>
+                <div class="insert-reset-observation">
+                    <button id="observationbutton" type="button" onclick="openobservation()"
+                        disabled>Observations</button>
+                </div>
+                <div class="insert-reset-observation">
+                    <button id="finalresult" type="button" onclick="fresult()" disabled>Show Result</button>
+                </div>
+                <div class="result" style="text-align: left;">
+                    <br>
+                    <label>Theoretical Frequency:</label><br>
+                    <span id="tfreq"></span><br>
+                    <label>Practical Frequency:</label><br>
+                    <span id="pfreq"></span><br>
+                </div>
+                <div class="insert-reset-observation">
+                    <button id="reset" type="reset" onclick="Refresh()">Reset</button>
+                </div>
+                <div class="help">
+                    <button type="button" onclick="help()"><img src="images/help.png" alt="helpicon"></button>
+                </div>
+            </div>
+
+            <!-- simulation -->
+            <div class="mainsimulation" id="mainsimulation">
+                <span id="Rfvalue" style="display:none ;"></span>
+                <p id="add">Values added to observation!</p>
+                <img class="circuit" id="ibjt" src="images/circuit1.png" alt="PSOwithBJT" style="display:none ;">
+                <img class="circuit" id="ibjt1" src="images/circuit2.png" alt="PSOwithBJT" style="display:none ;">
+                <img class="circuitb" id="iopamp" src="images/circuit3.png" alt="PSOwithopamp" style="display:none ;">
+                <img class="circuitb" id="iopamp1" src="images/circuit4.png" alt="PSOwithopamp" style="display:none ;">
+                <button type="button" id="view" onclick="IBgraph()" style="width: 100px;display:none;margin-left: 450px;">View graph</button>
+            </div>
+            <div id="instructions">
+                <div class="icontent">
+                    <h4>Instructions</h4>
+                    <ol>
+                        <li>Select the required circuit</li>
+                        <li>Enter values of resistance and capacitance and press ok button</li>
+                        <li>Click on the 'Add to Table' button to add values to the table.
+                        </li>
+                        <li>Click on the 'Observation' button to view the table.</li>
+                        <li>Click on the Turn on button to check oscilloscope.</li>
+                        <li>Click on view graph button to check the graph</li>
+                        <li>Click on the 'Insert Probe' button to insert the probe into the electromagnet.</li>
+                        <li>The show result button gives out the result of the experiement</li>
+                    </ol>
+                </div>
+                <button type="button" onclick="closeobservation()">Close</button>
+            </div>
+            <div id="IBgraph">
+                <div id="myChart"></div>
+                <button onclick="closeobservation()">Close</button>
+            </div>
+
+            <!-- ib table  -->
+            <div class="observation" id="IBobservation">
+                <div class="tablediv" id="IBtablediv">
+                    <table class="observationTable" id="IBobservationTable">
+                        <tr>
+                            <th>Capacitance(μC)</th>
+                            <th>Resistance(kΩ)</th>
+                            <th>Practical Frequency(kHz)</th>
+                            <th>Theoritical Frequency(kHz)</th>
+                            <th>Error(%)</th>
+                        </tr>
+                    </table>
+                </div>
+                <div class="tableObservation" id="IBtableObservation">
+                    <button type="button" onclick="closeobservation()">Close</button>
+                    <button type="button" onclick="clearing()" style="width: 70px;">Clear All</button>
+                </div>
+            </div>
+            <!-- images name  -->
+            <div class="electromagnet" id="electromagnet" title="Electromagnet" style="display: none;"></div>
+            <div class="ammeter" id="ammeter" title="Ammeter" style="display: none;"></div>
+            <div class="digitalgaussmeter" id="digitalgaussmeter" title="Digital Gauss Meter" style="display: none;">
+            </div>
+            <div class="hallsensor" id="hallsensor" title="Hall Sensor" style="display: none;"></div>
+            <div id="hprobe" class="hprobe" title="Hall Probe" style="display: none;"></div>
+            <div id="powersupply" class="powersupply" title="Constant Power Supply" style="display: none;"></div>
+        </div>
+
+        <!-- content3 -->
+        <div style="display: none;" id="content3">
+            <div id="graph"></div>
+        </div>
+
+        <!-- next button -->
+        <button id="buttonup" onclick="up()"><img class="nextimg" src="images/arrow.png" alt="arrow"></button>
+        <button id="buttondown" onclick="down()"><img class="nextimg" src="images/arrow.png" alt="arrow"></button>
+    </div>
+        <script src="js/script.js"></script>
 </body>
 </html>
