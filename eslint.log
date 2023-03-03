@@ -1,0 +1,29 @@
+
+/home/runner/work/exp-phase-shift-oscillator-nitk/exp-phase-shift-oscillator-nitk/experiment/simulation/js/script.js
+    1:5   warning  'hvoltage' is assigned a value but never used                    no-unused-vars
+   30:10  warning  'up' is defined but never used                                   no-unused-vars
+   35:10  warning  'down' is defined but never used                                 no-unused-vars
+   58:9   warning  'plotting' is not defined                                        no-undef
+   63:10  warning  'update' is defined but never used                               no-unused-vars
+  106:10  warning  'insert' is defined but never used                               no-unused-vars
+  167:8   warning  Expected a conditional expression and instead saw an assignment  no-cond-assign
+  167:8   warning  Unexpected constant condition                                    no-constant-condition
+  167:8   warning  'option' is not defined                                          no-undef
+  178:13  warning  Expected a conditional expression and instead saw an assignment  no-cond-assign
+  178:13  warning  Unexpected constant condition                                    no-constant-condition
+  178:13  warning  'option' is not defined                                          no-undef
+  191:10  warning  'Refresh' is defined but never used                              no-unused-vars
+  193:2   warning  Unnecessary semicolon                                            no-extra-semi
+  195:10  warning  'openobservation' is defined but never used                      no-unused-vars
+  212:10  warning  'AddingToArray' is defined but never used                        no-unused-vars
+  264:10  warning  'disres' is defined but never used                               no-unused-vars
+  268:10  warning  'discap' is defined but never used                               no-unused-vars
+  278:10  warning  'IBgraph' is defined but never used                              no-unused-vars
+  316:5   warning  'Plotly' is not defined                                          no-undef
+  320:10  warning  'help' is defined but never used                                 no-unused-vars
+  326:10  warning  'fresult' is defined but never used                              no-unused-vars
+  331:10  warning  'storeNumber' is defined but never used                          no-unused-vars
+
+✖ 23 problems (0 errors, 23 warnings)
+  0 errors and 1 warning potentially fixable with the `--fix` option.
+
