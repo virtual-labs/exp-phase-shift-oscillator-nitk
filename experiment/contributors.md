@@ -5,7 +5,7 @@
 | SNo. |        Name         | Institute |              Department              |
 | :--: | :-----------------: | :-------: | :----------------------------------: |
 |  1   |    Dr. Ajith K M    |   NITK    |        Department of Physics         |
-|  1   | Dr. K V Gangadharan |   NITK    | Department of Mechanical Engineering |
+|  2   | Dr. K V Gangadharan |   NITK    | Department of Mechanical Engineering |
 
 ### Lab Developers:
 

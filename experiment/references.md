@@ -6,7 +6,7 @@
     <th>Contributors list</th>
   </tr>
   <tr style="background-color: white">
-    <td>
+    <td style="width:500px">
     <ol>
     <li>Bell, David A. &quot;Electronic devices and circuits.&quot; Reston: Reston Publ. Comp (1980).</li>
     </ol>
