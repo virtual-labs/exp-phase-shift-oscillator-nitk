@@ -1,6 +1,6 @@
 ### Theory
 
-1. **RC Phase shift oscillator using Op-AMP**
+**1. RC Phase shift oscillator using Op-AMP**
 
 A phase-shift oscillator is a linear electronic oscillator circuit that produces a sine wave output. It consists of an inverting amplifier element, such as a transistor or op-amp, with its output fed back to its input through a phase-shift network consisting of resistors and capacitors in a ladder network. The feedback network 'shifts' the phase of the amplifier output by 180 degrees at the oscillation frequency to give positive feedback. Phase-shift oscillators are often used at an audio frequency as audio oscillators.
 
@@ -38,7 +38,7 @@ If R2 = R3 = R, and C1 = C2 = C3 = C, the oscillation frequency of the oscillato
 
 </center>
 
-2. **Rc Phase shift oscillator using BJT**
+**2. Rc Phase shift oscillator using BJT**
 
 The RC phase shift oscillator using BJT consists of three identical RC sections connected in series with a common emitter amplifier. Each RC section consists of a resistor and a capacitor. The capacitors are connected in series and the resistors are connected in parallel. The basic working principle of the circuit is based on the phase shift created by the RC network. Each RC section shifts the phase of the signal by 60 degrees, resulting in a total phase shift of 180 degrees. The amplifier provides an additional 180 degrees of phase shift, resulting in a total phase shift of 360 degrees, which is equivalent to zero phase shift. The BJT transistor is biased in the active region, with its base-emitter junction forward-biased and collector-base junction reverse-biased. The input signal is applied to the base of the transistor through a coupling capacitor. The transistor amplifies the signal and the output is taken from the collector of the transistor through a resistor. The resistor connected to the collector provides the feedback required for oscillation. The feedback signal is fed back to the input through the RC network, which provides the necessary phase shift to sustain oscillation. The frequency of oscillation can be calculated using the following formula:
 
