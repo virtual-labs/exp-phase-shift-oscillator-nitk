@@ -12,7 +12,7 @@
     </ol>
    </td>
     <td>Developer : Dr. Ajith K M | NITK</br></br>
-    <td>Developer : Dr. K V Gangadharan | NITK</br></br>
+    Developer : Dr. K V Gangadharan | NITK</br></br>
     Contributors :
   <ul style="list-style-type: none;">
     <li>Adithya M S | NMAMIT, Nitte</li>
