@@ -254,7 +254,21 @@ function clearing() {
 function timer() {
     document.getElementById('add').style.display = 'none';
 }
+function timeres() {
+    document.getElementById('addres').style.display = 'none';
+}
+function timecap() {
+    document.getElementById('addcap').style.display = 'none';
+}
 
+function disres(){
+    document.getElementById('addres').style.display = 'block';
+    setTimeout(timeres, 1000);
+}
+function discap(){
+    document.getElementById('addcap').style.display = 'block';
+    setTimeout(timecap, 1000);
+}
 
 // Function to generate practical frequency
 function practfreq(min, max) {
@@ -267,8 +281,8 @@ function IBgraph() {
     document.getElementById('myChart').style.display = 'block'
     document.getElementById('blocker').style.display = 'block';
 
-    var from = -10; // starting value
-    var to = 10; // ending value
+    var from = -1000; // starting value
+    var to = 1000; // ending value
     var step = 0.01; // step size
 
     var xValues = [];
@@ -289,13 +303,13 @@ function IBgraph() {
         width: 700,
         height: 400,
         xaxis: {
-            title: "time period(in μs)",
+            title: "time period(in ms)",
             range: [-0.5,0.5]
         },
         yaxis: {
             title: "Voltage(V)"
         },
-        title: "Ocillation"
+        title: "Oscillation"
     };
 
     // Display using Plotly

@@ -64,11 +64,11 @@
                 </div>
                 <div class="values">
                     <label for="resvalue" style="text-align: left;">Resistance(kΩ)</label>
-                    <input type="number" id="resvalue" name="resvalue" disabled > 
-                    <button onclick="storeNumber()">OK</button><br><br>
-                    <label  for="capvalue">Capacitance(μC)</label>
-                    <input type="number" id="capvalue" name="capvalue" disabled >
-                    <button onclick="storeNumber()">OK</button>
+                    <input type="number" id="resvalue" name="resvalue" step="any" oninput="validity.valid||(value='')"; disabled > 
+                    <button onclick="storeNumber();disres()">OK</button><br><br>
+                    <label  for="capvalue">Capacitance(μF)</label>
+                    <input type="number" id="capvalue" name="capvalue" step="any" oninput="validity.valid||(value='')"; disabled >
+                    <button onclick="storeNumber();discap()">OK</button>
 
                 </div>
 
@@ -107,6 +107,8 @@
             <div class="mainsimulation" id="mainsimulation">
                 <span id="Rfvalue" style="display:none ;"></span>
                 <p id="add">Values added to observation!</p>
+                <p id="addres">Resistance added!</p>
+                <p id="addcap">Capactiance added!</p>
                 <img class="circuit" id="ibjt" src="images/circuit1.png" alt="PSOwithBJT" style="display:none ;">
                 <img class="circuit" id="ibjt1" src="images/circuit2.png" alt="PSOwithBJT" style="display:none ;">
                 <img class="circuitb" id="iopamp" src="images/circuit3.png" alt="PSOwithopamp" style="display:none ;">
@@ -117,15 +119,15 @@
                 <div class="icontent">
                     <h4>Instructions</h4>
                     <ol>
-                        <li>Select the required circuit</li>
-                        <li>Enter values of resistance and capacitance and press ok button</li>
-                        <li>Click on the 'Add to Table' button to add values to the table.
-                        </li>
+                        <li>Select the required circuit.</li>
+                        <li>Enter values of resistance and capacitance and press 'OK' button for both.</li>
+                        <li>Click on the 'Add to Table' button to add values to the table.</li>
                         <li>Click on the 'Observation' button to view the table.</li>
-                        <li>Click on the Turn on button to check oscilloscope.</li>
-                        <li>Click on view graph button to check the graph</li>
-                        <li>Click on the 'Insert Probe' button to insert the probe into the electromagnet.</li>
-                        <li>The show result button gives out the result of the experiement</li>
+                        <li>Click on the 'Turn on' button to check oscilloscope.</li>
+                        <li>Click on 'View Graph' button to check the graph</li>
+                        <li>Graph can be resized along the axes, corners and also zoomed in.</li>
+                        <li>Click on the 'Turn off' button to enter new values.</li>
+                        <li>The 'Show Result' button gives out the result of the current setup</li>
                     </ol>
                 </div>
                 <button type="button" onclick="closeobservation()">Close</button>
