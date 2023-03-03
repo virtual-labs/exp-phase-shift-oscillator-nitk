@@ -265,6 +265,18 @@
     margin-top: 5px;
     margin-right: 5px;
   }
+  #addres {
+    display: none;
+    float: left;
+    margin-top: 5px;
+    margin-right: 5px;
+  }
+  #addcap {
+    display: none;
+    float: left;
+    margin-top: 5px;
+    margin-right: 5px;
+  }
   .observation {
     display: none;
     height: 400px;
@@ -386,3 +398,9 @@
     margin-bottom: 5px;
   }
 
+/* Remove arrow in inputs for Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
