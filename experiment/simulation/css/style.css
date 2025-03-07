@@ -10,17 +10,17 @@
   position: relative;
   padding: 0.5rem 0.5rem;
 }
-#add{
+#add {
   display: none;
 }
-#addres{
+#addres {
   display: none;
 }
-#addcap{
+#addcap {
   display: none;
 }
-#remove{
-  display: none; 
+#remove {
+  display: none;
   font-size: 12px;
 }
 
@@ -418,7 +418,7 @@ h1 {
   display: flex;
   gap: 2rem;
 }
-.ok{
+.ok {
   background-image: linear-gradient(
     to bottom,
     var(--clr-side-background2),
@@ -482,7 +482,7 @@ h1 {
   grid-column: 1/-1;
   letter-spacing: 0.2rem;
 }
-.btn:disabled {
+.insert-reset-observation button:disabled {
   background-image: linear-gradient(
     to bottom,
     var(--clr-body-clr),
@@ -925,28 +925,28 @@ input[type="radio"] {
     box-shadow: 0 0.2rem 0.6rem rgba(0, 0, 0, 0.8);
   }
 }
-#electromagnet{
+#electromagnet {
   display: none;
 }
-#ammeter{
+#ammeter {
   display: none;
 }
-#digitalgaussmeter{
+#digitalgaussmeter {
   display: none;
 }
-#hallsensor{
+#hallsensor {
   display: none;
 }
-#hprobe{
+#hprobe {
   display: none;
 }
-#powersupply{
+#powersupply {
   display: none;
 }
-#c1{
+#c1 {
   width: 70px;
 }
-#c2{
+#c2 {
   width: 100px;
 }
 #instructions {
@@ -1005,7 +1005,6 @@ input[type="radio"] {
 .circuit {
   width: 539px;
   height: 378px;
-  
 }
 .circuitb {
   /* transform: scale(0.9); */
@@ -1099,7 +1098,6 @@ th {
   overflow-y: scroll;
 }
 
-
 .tableObservation {
   display: flex;
   height: 42px;
@@ -1124,36 +1122,37 @@ th {
   max-width: 300px;
   margin: auto;
 }
-.result{
+.result {
   grid-column: span 2;
   display: flex;
   justify-self: center;
 }
-#resvalue{
+#resvalue {
   height: 20px;
-    width: 80px;border: 1px solid #396464;
-    background-color: white;
-    border-radius: 4px;
-    padding: 5px;
-    /* box-shadow: 0px 8px 16px 0px rgba(65, 62, 62, 0.219); */
-    cursor: pointer;
+  width: 80px;
+  border: 1px solid #396464;
+  background-color: white;
+  border-radius: 4px;
+  padding: 5px;
+  /* box-shadow: 0px 8px 16px 0px rgba(65, 62, 62, 0.219); */
+  cursor: pointer;
 }
-#capvalue{
+#capvalue {
   height: 20px;
-    width: 80px;
-    border: 1px solid #396464;
-    background-color: white;
-    border-radius: 4px;
-    padding: 5px;
-    /* box-shadow: 0px 8px 16px 0px rgba(65, 62, 62, 0.219); */
-    cursor: pointer;
+  width: 80px;
+  border: 1px solid #396464;
+  background-color: white;
+  border-radius: 4px;
+  padding: 5px;
+  /* box-shadow: 0px 8px 16px 0px rgba(65, 62, 62, 0.219); */
+  cursor: pointer;
 }
 .reset-btn {
   grid-column: span 2;
   display: flex;
   justify-content: center;
 }
-#reset{
+#reset {
   height: 42px;
 }
 
@@ -1366,21 +1365,21 @@ th {
   font-size: 19px;
   text-align: center;
 }
-#ibjt1{
+#ibjt1 {
   display: flex;
   align-items: center;
   justify-content: center;
 }
-#circuit1{
+#circuit1 {
   display: none;
 }
-#circuit2{
+#circuit2 {
   display: none;
 }
-#circuit3{
+#circuit3 {
   display: none;
 }
-#circuit4{
+#circuit4 {
   display: none;
 }
 
