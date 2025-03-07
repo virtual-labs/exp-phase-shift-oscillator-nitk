@@ -90,13 +90,12 @@
               <img
                 id="reset"
                 type="reset"
-                
                 onclick="Refresh()"
                 src="images/bluecwdull.svg"
                 alt="Refresh Button"
               />
             </a>
-            <span class="refresh">Refresh</span>
+            <span class="refresh">Reset</span>
           </li>
         </ul>
       </div>
@@ -116,46 +115,55 @@
               </div>
               <div class="task-screen apparatus hide">
                 <!-- <h3 class="apparatus__title">Apparatus</h3> -->
-                <p>Transistor, oscilloscope, breadboard, resistors, capacitors, wires, voltmeter.</p>
+                <p>
+                  Transistor, oscilloscope, breadboard, resistors, capacitors,
+                  wires, voltmeter.
+                </p>
                 <div class="apparatus-screen">
                   <div class="apparatus-tool">
                     <img
-                    src="images/transistor.png" alt="transistor"
+                      src="images/transistor.png"
+                      alt="transistor"
                       class="tool-img diode"
                     />
                     <span>Transistor</span>
                   </div>
                   <div class="apparatus-tool">
                     <img
-                    src="images/capacitor.png" alt="capacitor"
+                      src="images/capacitor.png"
+                      alt="capacitor"
                       class="tool-img capacitor"
                     />
                     <span>Capacitor</span>
                   </div>
                   <div class="apparatus-tool">
                     <img
-                    src="images/resistor.png" alt="resistor"
+                      src="images/resistor.png"
+                      alt="resistor"
                       class="tool-img resistor"
                     />
                     <span>Resistor</span>
                   </div>
                   <div class="apparatus-tool">
                     <img
-                    src="images/opamp.png" alt="opamp"
+                      src="images/opamp.png"
+                      alt="opamp"
                       class="tool-img opamp"
                     />
                     <span>Opamp</span>
                   </div>
                   <div class="apparatus-tool">
                     <img
-                    src="images/oscilloscope.png" alt="oscilloscope"
+                      src="images/oscilloscope.png"
+                      alt="oscilloscope"
                       class="tool-img scope"
                     />
                     <span>Oscilloscope</span>
                   </div>
                   <div class="apparatus-tool">
                     <img
-                    src="images/breadboard.png" alt="breadboard"
+                      src="images/breadboard.png"
+                      alt="breadboard"
                       class="tool-img board"
                     />
                     <span>Breadboard</span>
@@ -173,22 +181,11 @@
                 <div class="procedure" id="proc">
                   <div class="radio-container">
                     <div class="radio-option">
-                      <input
-                        type="radio"
-                        id="exp1"
-                        name="exp"
-                        value="bjt"
-                      />
-                      <label for="exp1">Bjt</label
-                      ><br /><br />
+                      <input type="radio" id="exp1" name="exp" value="bjt" />
+                      <label for="exp1">Bjt</label><br /><br />
                     </div>
                     <div class="radio-option">
-                      <input
-                        type="radio"
-                        id="exp2"
-                        name="exp"
-                        value="opamp"
-                      />
+                      <input type="radio" id="exp2" name="exp" value="opamp" />
                       <label for="exp2">Opamp</label>
                     </div>
                   </div>
@@ -208,40 +205,40 @@
                 <div class="mainsimulation" id="mainsimulation">
                   <span id="voltagevalue"></span>
                   <p id="add">Values added to observation!</p>
-                <p id="addres">Resistance added!</p>
-                <p id="addcap">Capactiance added!</p>
+                  <p id="addres">Resistance added!</p>
+                  <p id="addcap">Capactiance added!</p>
                   <div class="cont1">
-                    <span id="voltagevalue" ></span>
-                    <span id="fieldvalue" ></span>
+                    <span id="voltagevalue"></span>
+                    <span id="fieldvalue"></span>
                     <img
                       class="circuit"
                       id="ibjt"
                       src="images/circuit1.png"
                       alt="circuit1"
-                      style="display:none ;"
+                      style="display: none"
                     />
                     <img
                       class="circuit"
                       id="ibjt1"
                       src="images/circuit2.png"
                       alt="circuit2"
-                      style="display:none "
+                      style="display: none"
                     />
                     <img
                       class="circuit"
-                      id="iopamp" 
+                      id="iopamp"
                       src="images/circuit3.png"
                       alt="circuit3"
-                      style="display:none ;"
+                      style="display: none"
                     />
                     <img
                       class="circuit"
                       id="iopamp1"
                       src="images/circuit4.png"
                       alt="circuit4"
-                      style="display:none ;"
+                      style="display: none"
                     />
-                   
+
                     <!-- <img id="probe" src="images/probe.png" alt="probe" />
                     <img id="wire" src="images/wire.png" alt="wire" />
                     <img
@@ -258,7 +255,14 @@
                     /> -->
                     <div id="myDiv"></div>
                   </div>
-                  <button type="button" id="view" onclick="IBgraph()" style="width: 100px;display:none;">View graph</button>
+                  <button
+                    type="button"
+                    id="view"
+                    onclick="IBgraph()"
+                    style="width: 100px; display: none"
+                  >
+                    View graph
+                  </button>
                 </div>
                 <div id="IBgraph">
                   <div id="myChart"></div>
@@ -278,15 +282,31 @@
                   <h2 id="instruct">Instructions</h2>
                   <ol>
                     <li>Select the required circuit.</li>
-                    <li>Enter values of resistance and capacitance and press 'OK' button for both.</li>
-                    <li>Click on the 'Add to Table' button to add values to the table.</li>
-                    <li>Click on the 'Observation' button to view the table.</li>
-                    <li>Click on the 'Turn on' button to check oscilloscope.</li>
+                    <li>
+                      Enter values of resistance and capacitance and press 'OK'
+                      button for both.
+                    </li>
+                    <li>
+                      Click on the 'Add to Table' button to add values to the
+                      table.
+                    </li>
+                    <li>
+                      Click on the 'Observation' button to view the table.
+                    </li>
+                    <li>
+                      Click on the 'Turn on' button to check oscilloscope.
+                    </li>
                     <li>Click on 'View Graph' button to check the graph</li>
-                    <li>Graph can be resized along the axes, corners and also zoomed in.</li>
+                    <li>
+                      Graph can be resized along the axes, corners and also
+                      zoomed in.
+                    </li>
                     <li>Click on the 'Turn off' button to enter new values.</li>
-                    <li>The 'Show Result' button gives out the result of the current setup</li>
-                </ol>
+                    <li>
+                      The 'Show Result' button gives out the result of the
+                      current setup
+                    </li>
+                  </ol>
                 </div>
                 <!-- <button type="button" onclick="closeobservation()">Close</button> -->
               </div>
@@ -301,7 +321,11 @@
                   </table>
                 </div>
                 <div class="tableObservation" id="tableObservation">
-                  <button type="button" class="btn" onclick="closeobservation()">
+                  <button
+                    type="button"
+                    class="btn"
+                    onclick="closeobservation()"
+                  >
                     Close
                   </button>
                   <button
@@ -312,12 +336,7 @@
                   >
                     Clear All
                   </button>
-                  <button
-                    type="button"
-                    id="c2"
-                    onclick="plotgraph()"
-                    
-                  >
+                  <button type="button" id="c2" onclick="plotgraph()">
                     Plot Graph
                   </button>
                 </div>
@@ -335,7 +354,11 @@
                   </table>
                 </div>
                 <div class="tableObservation" id="IBtableObservation">
-                  <button type="button" class="btn" onclick="closeobservation()">
+                  <button
+                    type="button"
+                    class="btn"
+                    onclick="closeobservation()"
+                  >
                     Close
                   </button>
                   <button
@@ -361,37 +384,19 @@
                 class="electromagnet"
                 id="electromagnet"
                 title="Electromagnet"
-                
               ></div>
-              <div
-                class="ammeter"
-                id="ammeter"
-                title="Ammeter"
-                
-              ></div>
+              <div class="ammeter" id="ammeter" title="Ammeter"></div>
               <div
                 class="digitalgaussmeter"
                 id="digitalgaussmeter"
                 title="Digital Gauss Meter"
-                
               ></div>
-              <div
-                class="hallsensor"
-                id="hallsensor"
-                title="Hall Sensor"
-                
-              ></div>
-              <div
-                id="hprobe"
-                class="hprobe"
-                title="Hall Probe"
-                
-              ></div>
+              <div class="hallsensor" id="hallsensor" title="Hall Sensor"></div>
+              <div id="hprobe" class="hprobe" title="Hall Probe"></div>
               <div
                 id="powersupply"
                 class="powersupply"
                 title="Constant Power Supply"
-                
               ></div>
             </div>
           </div>
@@ -419,14 +424,32 @@
                 </div> -->
                 <div class="values">
                   <label for="resvalue">Resistance(kΩ)</label>
-                  <input type="number" id="resvalue" name="resvalue" step="any" oninput="validity.valid||(value='');" disabled>
-                  <button class="ok" onclick="storeNumber();disres()">OK</button>
-              
+                  <input
+                    type="number"
+                    id="resvalue"
+                    name="resvalue"
+                    step="any"
+                    oninput="validity.valid||(value='');"
+                    disabled
+                  />
+                  <button class="ok" onclick="storeNumber();disres()">
+                    OK
+                  </button>
+
                   <label for="capvalue">Capacitance(μF)</label>
-                  <input type="number" id="capvalue" name="capvalue" step="any" oninput="validity.valid||(value='');" disabled>
-                  <button class="ok" onclick="storeNumber();discap()">OK</button>
-              </div>
-              <!-- <div class="insert-reset-observation">
+                  <input
+                    type="number"
+                    id="capvalue"
+                    name="capvalue"
+                    step="any"
+                    oninput="validity.valid||(value='');"
+                    disabled
+                  />
+                  <button class="ok" onclick="storeNumber();discap()">
+                    OK
+                  </button>
+                </div>
+                <!-- <div class="insert-reset-observation">
                 <button id="insert" type="button" onclick="insert()" disabled>Turn on</button>
                 <button id="remove" type="button" onclick="remove()" style="display:none;font-size: 12px;">Turn off</button>
             </div>
@@ -457,33 +480,66 @@
                 </div> -->
                 <div id="grid1">
                   <div class="insert-reset-observation">
-                    <button id="insert" type="button" onclick="insert()" disabled>Turn on</button>
-                    <button id="remove" type="button" onclick="remove()" style="display:none;font-size: 12px;">Turn off</button>
-                </div>
+                    <button
+                      id="insert"
+                      type="button"
+                      onclick="insert()"
+                      disabled
+                    >
+                      Turn on
+                    </button>
+                    <button
+                      id="remove"
+                      type="button"
+                      onclick="remove()"
+                      style="display: none; font-size: 12px"
+                    >
+                      Turn off
+                    </button>
+                  </div>
 
-                <div class="insert-reset-observation">
-                    <button id="addbutton" type="button" onclick="AddingToArray()" disabled>Add to Table</button>
-
+                  <div class="insert-reset-observation">
+                    <button
+                      id="addbutton"
+                      type="button"
+                      onclick="AddingToArray()"
+                      disabled
+                    >
+                      Add to Table
+                    </button>
+                  </div>
+                  <div class="insert-reset-observation">
+                    <button
+                      id="observationbutton"
+                      type="button"
+                      onclick="openobservation()"
+                      disabled
+                    >
+                      Observations
+                    </button>
+                  </div>
+                  <div class="insert-reset-observation">
+                    <button
+                      id="finalresult"
+                      type="button"
+                      onclick="fresult()"
+                      disabled
+                    >
+                      Show Result
+                    </button>
+                  </div>
+                  <div
+                    class="result insert-reset-observation"
+                    id="res1"
+                    style="text-align: left; display: none"
+                  >
+                    <label>Theoretical Frequency:</label>
+                    <span id="tfreq"></span><br />
+                    <label>Practical Frequency:</label>
+                    <span id="pfreq"></span><br />
+                  </div>
                 </div>
-                <div class="insert-reset-observation">
-                    <button id="observationbutton" type="button" onclick="openobservation()"
-                        disabled>Observations</button>
-                </div>
-                <div class="insert-reset-observation">
-                    <button id="finalresult" type="button" onclick="fresult()" disabled>Show Result</button>
-                </div>
-                <div class="result insert-reset-observation" id="res1" style="text-align: left; display: none;">
-                  
-                  <label>Theoretical Frequency:</label>
-                  <span id="tfreq"></span><br>
-                  <label>Practical Frequency:</label>
-                  <span id="pfreq"></span><br>
               </div>
-
-                
-                </div>
-              </div>
-             
             </div>
             <button
               class="btn btn-top hide"
