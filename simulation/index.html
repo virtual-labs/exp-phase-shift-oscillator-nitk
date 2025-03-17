@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SOLVE</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css"
+    />
+    <link rel="stylesheet" href="css/general.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/query.css" />
+    <!-- <script defer src="https://code.jquery.com/jquery.min.js"></script> -->
+    <script
+      defer
+      src="https://code.jquery.com/jquery-3.7.0.min.js"
+      integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g="
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.plot.ly/plotly-2.12.1.min.js"></script>
+    <title>Virtual Lab</title>
+    <script src="https://cdn.plot.ly/plotly-2.18.2.min.js"></script>
+    <script
+      defer
+      src="https://code.jquery.com/ui/1.8.17/jquery-ui.min.js"
+    ></script>
+    <script defer src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script defer src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    <script
+      defer
+      type="text/javascript"
+      src="//cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"
+    ></script>
+  </head>
+  <body>
+    <div class="title-div-container">
+      <div class="title-div">
+        <div class="logo-div">
+          <a href="#"
+            ><img src="images/logo_nitk.png" alt="Logo" class="logo"
+          /></a>
+        </div>
+        <h1>Phase Shift Oscillator</h1>
+      </div>
+    </div>
+    <div class="container">
+      <div class="sidebar">
+        <ul class="tool-menu">
+          <li class="tool-list tool-objective" onclick="displayDiv(this)">
+            <a class="tool-link" title="Objective">
+              <img src="./images/objective.png" alt="Objective" class="icons" />
+            </a>
+            <span>Objective</span>
+          </li>
+          <li class="tool-list tool-apparatus" onclick="displayDiv(this)">
+            <a class="tool-link" title="Apparatus"
+              ><img src="./images/apparatus.png" alt="Objective" class="icons"
+            /></a>
+            <span>Apparatus</span>
+          </li>
+
+          <li class="tool-list tool-practice" onclick="displayDiv(this)">
+            <a class="tool-link" title="Experiment"
+              ><img src="./images/solution.png" alt="solution" class="icons"
+            /></a>
+            <span>Experiment</span>
+          </li>
+          <li
+            class="tool-list tool-help"
+            id="help1"
+            onclick="displayDiv(this)"
+            disabled
+          >
+            <a class="tool-link" title="Help" onclick="help()"
+              ><img src="./images/help1.png" alt="Help" class="icons"
+            /></a>
+            <span>Help</span>
+          </li>
+          <li class="tool-list">
+            <a href="#" class="tool-link" id="refreshLink" title="Refresh">
+              <img
+                id="reset"
+                type="reset"
+                onclick="Refresh()"
+                src="images/bluecwdull.svg"
+                alt="Refresh Button"
+              />
+            </a>
+            <span class="refresh">Reset</span>
+          </li>
+        </ul>
+      </div>
+      <div class="main">
+        <div class="main-section">
+          <div id="simulation" class="main__task-div">
+            <h3 class="task-title">Objective</h3>
+
+            <div class="canvas__div">
+              <div class="task-screen objective">
+                <!-- <h3 class="objective__title">Objective</h3> -->
+                <ol class="objective__main">
+                  <li>
+                    To design a phase shift oscillator and find Frequency.
+                  </li>
+                </ol>
+              </div>
+              <div class="task-screen apparatus hide">
+                <!-- <h3 class="apparatus__title">Apparatus</h3> -->
+                <p>
+                  Transistor, oscilloscope, breadboard, resistors, capacitors,
+                  wires, voltmeter.
+                </p>
+                <div class="apparatus-screen">
+                  <div class="apparatus-tool">
+                    <img
+                      src="images/transistor.png"
+                      alt="transistor"
+                      class="tool-img diode"
+                    />
+                    <span>Transistor</span>
+                  </div>
+                  <div class="apparatus-tool">
+                    <img
+                      src="images/capacitor.png"
+                      alt="capacitor"
+                      class="tool-img capacitor"
+                    />
+                    <span>Capacitor</span>
+                  </div>
+                  <div class="apparatus-tool">
+                    <img
+                      src="images/resistor.png"
+                      alt="resistor"
+                      class="tool-img resistor"
+                    />
+                    <span>Resistor</span>
+                  </div>
+                  <div class="apparatus-tool">
+                    <img
+                      src="images/opamp.png"
+                      alt="opamp"
+                      class="tool-img opamp"
+                    />
+                    <span>Opamp</span>
+                  </div>
+                  <div class="apparatus-tool">
+                    <img
+                      src="images/oscilloscope.png"
+                      alt="oscilloscope"
+                      class="tool-img scope"
+                    />
+                    <span>Oscilloscope</span>
+                  </div>
+                  <div class="apparatus-tool">
+                    <img
+                      src="images/breadboard.png"
+                      alt="breadboard"
+                      class="tool-img board"
+                    />
+                    <span>Breadboard</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="task-screen practice hide">
+                <label
+                  for="procedure"
+                  id="procedure-title"
+                  class="procedure-title"
+                  >Choose the procedure :</label
+                >
+                <div class="procedure" id="proc">
+                  <div class="radio-container">
+                    <div class="radio-option">
+                      <input type="radio" id="exp1" name="exp" value="bjt" />
+                      <label for="exp1">Bjt</label><br /><br />
+                    </div>
+                    <div class="radio-option">
+                      <input type="radio" id="exp2" name="exp" value="opamp" />
+                      <label for="exp2">Opamp</label>
+                    </div>
+                  </div>
+
+                  <!-- OK Button -->
+                  <div class="ok-button-container">
+                    <button
+                      type="button"
+                      class="ok-button"
+                      id="ok1"
+                      onclick="update()"
+                    >
+                      OK
+                    </button>
+                  </div>
+                </div>
+                <div class="mainsimulation" id="mainsimulation">
+                  <span id="voltagevalue"></span>
+                  <p id="add">Values added to observation!</p>
+                  <p id="addres">Resistance added!</p>
+                  <p id="addcap">Capactiance added!</p>
+                  <div class="cont1">
+                    <span id="voltagevalue"></span>
+                    <span id="fieldvalue"></span>
+                    <img
+                      class="circuit"
+                      id="ibjt"
+                      src="images/circuit1.png"
+                      alt="circuit1"
+                      style="display: none"
+                    />
+                    <img
+                      class="circuit"
+                      id="ibjt1"
+                      src="images/circuit2.png"
+                      alt="circuit2"
+                      style="display: none"
+                    />
+                    <img
+                      class="circuit"
+                      id="iopamp"
+                      src="images/circuit3.png"
+                      alt="circuit3"
+                      style="display: none"
+                    />
+                    <img
+                      class="circuit"
+                      id="iopamp1"
+                      src="images/circuit4.png"
+                      alt="circuit4"
+                      style="display: none"
+                    />
+
+                    <!-- <img id="probe" src="images/probe.png" alt="probe" />
+                    <img id="wire" src="images/wire.png" alt="wire" />
+                    <img
+                      id="hallprobe"
+                      src="images/hallprobe1.png"
+                      alt="hallprobe"
+                   
+                    />
+                    <img
+                      id="hallwire"
+                      src="images/wire.png"
+                      alt="hallwire"
+                      
+                    /> -->
+                    <div id="myDiv"></div>
+                  </div>
+                  <button
+                    type="button"
+                    id="view"
+                    onclick="IBgraph()"
+                    style="width: 100px; display: none"
+                  >
+                    View graph
+                  </button>
+                </div>
+                <div id="IBgraph">
+                  <div id="myChart"></div>
+                  <button id="close1" onclick="closeobservation()">
+                    <span>&times;</span>
+                  </button>
+                </div>
+                <div id="content3">
+                  <div id="graph"></div>
+                  <button id="close2" onclick="closeobservation1()">
+                    <span>&times;</span>
+                  </button>
+                </div>
+              </div>
+              <div id="instructions">
+                <div class="icontent">
+                  <h2 id="instruct">Instructions</h2>
+                  <ol>
+                    <li>Select the required circuit.</li>
+                    <li>
+                      Enter values of resistance and capacitance and press 'OK'
+                      button for both.
+                    </li>
+                    <li>
+                      Click on the 'Add to Table' button to add values to the
+                      table.
+                    </li>
+                    <li>
+                      Click on the 'Observation' button to view the table.
+                    </li>
+                    <li>
+                      Click on the 'Turn on' button to check oscilloscope.
+                    </li>
+                    <li>Click on 'View Graph' button to check the graph</li>
+                    <li>
+                      Graph can be resized along the axes, corners and also
+                      zoomed in.
+                    </li>
+                    <li>Click on the 'Turn off' button to enter new values.</li>
+                    <li>
+                      The 'Show Result' button gives out the result of the
+                      current setup
+                    </li>
+                  </ol>
+                </div>
+                <!-- <button type="button" onclick="closeobservation()">Close</button> -->
+              </div>
+
+              <div class="observation" id="observation">
+                <div class="tablediv" id="tablediv">
+                  <table class="observationTable" id="observationTable">
+                    <tr>
+                      <th>Magnetic Field (mT)</th>
+                      <th>Hall Voltage (mV)</th>
+                    </tr>
+                  </table>
+                </div>
+                <div class="tableObservation" id="tableObservation">
+                  <button
+                    type="button"
+                    class="btn"
+                    onclick="closeobservation()"
+                  >
+                    Close
+                  </button>
+                  <button
+                    type="button"
+                    id="c1"
+                    onclick="clearing()"
+                    class="btn"
+                  >
+                    Clear All
+                  </button>
+                  <button type="button" id="c2" onclick="plotgraph()">
+                    Plot Graph
+                  </button>
+                </div>
+              </div>
+              <div class="observation" id="IBobservation">
+                <div class="tablediv" id="IBtablediv">
+                  <table class="observationTable" id="IBobservationTable">
+                    <tr>
+                      <th>Capacitance(μC)</th>
+                      <th>Resistance(kΩ)</th>
+                      <th>Practical Frequency(kHz)</th>
+                      <th>Theoritical Frequency(kHz)</th>
+                      <th>Error(%)</th>
+                    </tr>
+                  </table>
+                </div>
+                <div class="tableObservation" id="IBtableObservation">
+                  <button
+                    type="button"
+                    class="btn"
+                    onclick="closeobservation()"
+                  >
+                    Close
+                  </button>
+                  <button
+                    type="button"
+                    onclick="clearing()"
+                    style="width: 80px"
+                    class="btn"
+                  >
+                    Clear All
+                  </button>
+                  <!-- <button
+                    type="button"
+                    onclick="IBgraph()"
+                    style="width: 100px"
+                    class="btn"
+                  >
+                    I/B GRAPH
+                  </button> -->
+                </div>
+              </div>
+
+              <div
+                class="electromagnet"
+                id="electromagnet"
+                title="Electromagnet"
+              ></div>
+              <div class="ammeter" id="ammeter" title="Ammeter"></div>
+              <div
+                class="digitalgaussmeter"
+                id="digitalgaussmeter"
+                title="Digital Gauss Meter"
+              ></div>
+              <div class="hallsensor" id="hallsensor" title="Hall Sensor"></div>
+              <div id="hprobe" class="hprobe" title="Hall Probe"></div>
+              <div
+                id="powersupply"
+                class="powersupply"
+                title="Constant Power Supply"
+              ></div>
+            </div>
+          </div>
+          <div id="variables" class="main__task-div" style="display: none">
+            <div class="settings-sections">
+              <h3 class="task-title">Controls</h3>
+              <div
+                class="blocker"
+                onclick="closeobservation()"
+                id="blocker"
+              ></div>
+              <div class="simoptions" id="simoptions">
+                <!-- <div class="insert-reset-observation">
+                  <button id="insert" type="button" onclick="insert()" disabled>
+                    Insert Probe
+                  </button>
+                  <button
+                    id="remove"
+                    type="button"
+                    onclick="remove()"
+                    
+                  >
+                    Remove Probe
+                  </button>
+                </div> -->
+                <div class="values">
+                  <label for="resvalue">Resistance(kΩ)</label>
+                  <input
+                    type="number"
+                    id="resvalue"
+                    name="resvalue"
+                    step="any"
+                    oninput="validity.valid||(value='');"
+                    disabled
+                  />
+                  <button class="ok" onclick="storeNumber();disres()">
+                    OK
+                  </button>
+
+                  <label for="capvalue">Capacitance(μF)</label>
+                  <input
+                    type="number"
+                    id="capvalue"
+                    name="capvalue"
+                    step="any"
+                    oninput="validity.valid||(value='');"
+                    disabled
+                  />
+                  <button class="ok" onclick="storeNumber();discap()">
+                    OK
+                  </button>
+                </div>
+                <!-- <div class="insert-reset-observation">
+                <button id="insert" type="button" onclick="insert()" disabled>Turn on</button>
+                <button id="remove" type="button" onclick="remove()" style="display:none;font-size: 12px;">Turn off</button>
+            </div>
+
+            <div class="insert-reset-observation">
+                <button id="addbutton" type="button" onclick="AddingToArray()" disabled>Add to Table</button>
+
+            </div>
+            <div class="insert-reset-observation">
+                <button id="observationbutton" type="button" onclick="openobservation()"
+                    disabled>Observations</button>
+            </div>
+            <div class="insert-reset-observation">
+                <button id="finalresult" type="button" onclick="fresult()" disabled>Show Result</button>
+            </div> -->
+                <!-- <div class="current">
+                  <p>Current: <span id="currentvalue"></span> mA</p>
+                  <input
+                    type="range"
+                    min="200"
+                    max="500"
+                    value="200"
+                    step="50"
+                    class="slider"
+                    id="cslider"
+                    disabled
+                  />
+                </div> -->
+                <div id="grid1">
+                  <div class="insert-reset-observation">
+                    <button
+                      id="insert"
+                      type="button"
+                      onclick="insert()"
+                      disabled
+                    >
+                      Turn on
+                    </button>
+                    <button
+                      id="remove"
+                      type="button"
+                      onclick="remove()"
+                      style="display: none; font-size: 12px"
+                    >
+                      Turn off
+                    </button>
+                  </div>
+
+                  <div class="insert-reset-observation">
+                    <button
+                      id="addbutton"
+                      type="button"
+                      onclick="AddingToArray()"
+                      disabled
+                    >
+                      Add to Table
+                    </button>
+                  </div>
+                  <div class="insert-reset-observation">
+                    <button
+                      id="observationbutton"
+                      type="button"
+                      onclick="openobservation()"
+                      disabled
+                    >
+                      Observations
+                    </button>
+                  </div>
+                  <div class="insert-reset-observation">
+                    <button
+                      id="finalresult"
+                      type="button"
+                      onclick="fresult()"
+                      disabled
+                    >
+                      Show Result
+                    </button>
+                  </div>
+                  <div
+                    class="result insert-reset-observation"
+                    id="res1"
+                    style="text-align: left; display: none"
+                  >
+                    <label>Theoretical Frequency:</label>
+                    <span id="tfreq"></span><br />
+                    <label>Practical Frequency:</label>
+                    <span id="pfreq"></span><br />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <button
+              class="btn btn-top hide"
+              title="Move to Top"
+              onclick="movetoTop()"
+              ontouchstart="movetoTop"
+            >
+              ↑
+            </button>
+            <!-- <button id="buttonup" onclick="up()"><img class="nextimg" src="images/bluebkdulls.svg" alt="arrow"></button> -->
+            <!-- <button id="buttondown" onclick="down()"><img class="nextimg" src="images/bluebkwdulls.svg" alt="arrow"></button> -->
+          </div>
+
+          <!-- <div id="Results" class="main__task-div" style="display: none">
+            <h3 class="task-title">Results</h3>
+            <div class="settings-sections">
+              
+              <button
+                class="btn btn-top hide"
+                title="Move to Top"
+                onclick="movetoTop()"
+                ontouchstart="movetoTop"
+              >
+                ↑
+              </button>
+            </div>
+          </div> -->
+        </div>
+
+        <div class="main__task-div footer">
+          <p>Copyright © SOLVE The Virtual Lab @ NITK Surathkal</p>
+        </div>
+      </div>
+    </div>
+
+    <script defer src="js/script.js"></script>
+  <script src="../assets/js/iframeResize.js"></script>
+        
+        </body>
+</html>

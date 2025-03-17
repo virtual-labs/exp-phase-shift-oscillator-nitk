@@ -1,0 +1,90 @@
+{
+  "version": 2.0,
+  "questions": [
+    {
+      "question": "What is the purpose of an RC phase shift oscillator?",
+      "answers": {
+        "a": "To generate a square wave output signal",
+        "b": "To generate a sine wave output signal",
+        "c": "To amplify an input signal",
+        "d": "To filter out high-frequency components from an input signal"
+      },
+      "explanations": {
+        "a": "",
+        "b": "",
+        "c": "",
+        "d": ""
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "How many RC sections are required for a basic RC phase shift oscillator?",
+      "answers": {
+        "a": "1",
+        "b": "2",
+        "c": "3",
+        "d": "4"
+      },
+      "explanations": {
+        "a": "",
+        "b": "",
+        "c": "",
+        "d": ""
+      },
+      "correctAnswer": "c",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "What is the phase shift created by each RC section in an RC phase shift oscillator?",
+      "answers": {
+        "a": "90 degrees",
+        "b": "60 degrees",
+        "c": "45 degrees",
+        "d": "30 degrees"
+      },
+      "explanations": {
+        "a": "",
+        "b": "",
+        "c": "",
+        "d": ""
+      },
+      "correctAnswer": "b",
+      "difficulty": "advanced"
+    },
+    {
+      "question": "What is the total phase shift provided by the RC network in an RC phase shift oscillator ?",
+      "answers": {
+        "a": "90 degrees",
+        "b": "180 degrees",
+        "c": "270 degrees",
+        "d": "360 degrees"
+      },
+      "explanations": {
+        "a": "",
+        "b": "",
+        "c": "",
+        "d": ""
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "What is the frequency of oscillation of an RC phase shift oscillator",
+      "answers": {
+        "a": "Directly proportional to the resistance of each resistor",
+        "b": "Directly proportional to the capacitance of each capacitor",
+        "c": "Inversely proportional to the resistance of each resistor",
+        "d": "Inversely proportional to the capacitance of each capacitor"
+      },
+      "explanations": {
+        "a": "",
+        "b": "",
+        "c": "",
+        "d": ""
+      },
+      "correctAnswer": "d",
+      "difficulty": "advanced"
+    }
+  ]
+}
