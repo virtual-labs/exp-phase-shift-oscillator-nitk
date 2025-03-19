@@ -2,38 +2,89 @@
   "version": 2.0,
   "questions": [
     {
-      "question": "This is a Sample Question 1?",
+      "question": "What is the disadvantage of an RC phase shift oscillator?",
       "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
+        "a": "It generates a distorted output signal ",
+        "b": "It is expensive to build",
+        "c": "It requires a large number of components",
+        "d": "It has a tendency to generate higher harmonic frequencies"
       },
       "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
+        "a": "",
+        "b": "",
+        "c": "",
+        "d": ""
       },
-      "correctAnswer": "a",
-      "difficulty": "beginner"
+      "correctAnswer": "d",
+      "difficulty": "intermediate"
     },
     {
-      "question": "This is a Sample Question 2?",
+      "question": "At what frequency range is an RC phase shift oscillator typically designed to operate?",
       "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
+        "a": "Above 10 MHz",
+        "b": "Below 1 kHz",
+        "c": "Below 10 MHz",
+        "d": "Above 100 kHz"
       },
       "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
+        "a": "",
+        "b": "",
+        "c": "",
+        "d": ""
       },
       "correctAnswer": "c",
       "difficulty": "beginner"
+    },
+    {
+      "question": "What is the formula for calculating the frequency of oscillation of an RC phase shift oscillator?",
+      "answers": {
+        "a": "f = 1 / (2πRC)",
+        "b": " f = 1 / (2π√(RC))",
+        "c": " f = 1 / (2πRC√3)",
+        "d": " f = 1 / (2πRC√6)"
+      },
+      "explanations": {
+        "a": "",
+        "b": "",
+        "c": "",
+        "d": ""
+      },
+      "correctAnswer": "d",
+      "difficulty": "advanced"
+    },
+    {
+      "question": "For an RC oscillator circuit, calculate the frequency for R=2kΩ and C=0.01µF ",
+      "answers": {
+        "a": "1.4 kHz",
+        "b": "3.24 kHz",
+        "c": "2.48 kHz",
+        "d": "4.56 kHz"
+      },
+      "explanations": {
+        "a": "",
+        "b": "",
+        "c": "",
+        "d": ""
+      },
+      "correctAnswer": "b",
+      "difficulty": "advanced"
+    },
+    {
+      "question": "Given f= 1000 kHz and C= 1/6𝜋 pF, calculate resistance value for the RC phase shift oscillator circuit.",
+      "answers": {
+        "a": "500 kΩ",
+        "b": "250 kΩ",
+        "c": "25 kΩ",
+        "d": "50 kΩ"
+      },
+      "explanations": {
+        "a": "",
+        "b": "",
+        "c": "",
+        "d": ""
+      },
+      "correctAnswer": "a",
+      "difficulty": "advanced"
     }
   ]
 }
